@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Leaflet Map</title>
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+    <!--    Added parameters to allow full screen web map from http://www.d3noob.org/2014/02/make-your-leafletjs-map-full-screen.html -->
+    
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        
+    </style>
+    
+</head>
+    
+<body>
+    
+    <header>
+        <h1> <p style="font-family: serif; color: darkgreen; font-size: 30px;">Web Developement Map </p> </h1>
+            
+        <h3> <p style="font-family: serif; color: darkgrey; font-size: 16px;">GIS 4533 Web-based GIS <br> Keely Hansen <br> <br> <a href="https://leafletjs.com">I built this with Leaflet</a> </p> </h3>
+        
+    </header>
+    
+    <!--    Added parameters to allow full screen map, removed pixel dimentions from http://www.d3noob.org/2014/02/make-your-leafletjs-map-full-screen.html-->
+    <div id="map"></div>
+    
+    <!--    container for displaying map coordinates-->
+    <pre id= 'info'></pre>
+    
+    <!--  removed div code with pixels  <div id="map" style="width: 705px; height: 375px"></div>-->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+    
+    <script>  
+        
+    // Create variable to hold map element, give initial settings to map
+    var map = L.map('map',{ center: [46.782518, -92.105790], zoom: 14});
+    
+    // Add new base map layer to map from http://leaflet-extras.github.io/leaflet-providers/preview/
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', { attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC' }).addTo(map);
+        
+    // Create point feature for Duluth City Hall, style and add to map
+    var myDataPoint = L.marker([46.783829, -92.105275]).addTo(map);
+        
+        
+    // Bind popup to data point feature, style picture
+    myDataPoint.bindPopup("<h3>Duluth City Hall</h3><p>Duluth, MN<br>Information about City Hall <br> <img src='City-Hall.png' </p>");
+        
+    
+    // Add map coordinates on mouse move
+    // https://docs.mapbox.com/,apbox-gl-js/example/mouse-position/
+    // demonstration in class from Kris Johnson
+    map.on('mousemove', function (e) {
+        console.log ('mousemove', e);
+        document.getElementById('info').innerHTML=
+        "Map Corrdinates: " +JSON.stringify(e.latlng);
+    });
+        
+    // Add map coordinates on mouse move
+    // https://docs.mapbox.com/,apbox-gl-js/example/mouse-position/
+    // demonstration in class from Kris Johnson
+    map.on('mousemove', function (e) {
+        console.log ('mousemove', e);
+        document.getElementById('info').innerHTML=
+        "Map Corrdinates: " +JSON.stringify(e.latlng);
+    });
+
+    </script>   
+    
+</body>
+</html>
