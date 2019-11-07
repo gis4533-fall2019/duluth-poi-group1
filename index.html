@@ -6,6 +6,7 @@
     
     <!-- External Stylesheets -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+            
     <!--    Added parameters to allow full screen web map from http://www.d3noob.org/2014/02/make-your-leafletjs-map-full-screen.html -->
     
     <style>
@@ -28,7 +29,7 @@
     <header>
         <h1> <p style="font-family: serif; color: darkgreen; font-size: 30px;">Duluth, MN Points of Interest </p> </h1>
             
-        <h3> <p style="font-family: serif; color: darkgrey; font-size: 16px;">GIS 4533 Web-based GIS <br> Keely Hansen, Sam Sharp and Ryan Peterson <br> <br> <a href="https://leafletjs.com">I built this with Leaflet</a> </p> </h3>
+        <h3> <p style="font-family: serif; color: darkgrey; font-size: 16px;">GIS 4533 Web-based GIS <br> Keely Hansen, Sam Sharp and Ryan Peterson <br> <a href="https://leafletjs.com">Built with Leaflet</a> </p> </h3>
         
     </header>
     
@@ -38,7 +39,7 @@
     <!--    container for displaying map coordinates-->
     <pre id= 'info'></pre>
     
-    <!--  removed div code with pixels  <div id="map" style="width: 705px; height: 375px"></div>-->
+    <!--  leaflet style -->
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
     
     <script>  
@@ -75,10 +76,10 @@
     var myDataPoint = L.marker([46.838563, -92.082981]).addTo(map);
         
     // Create polyline feature for Aerial Lift Bridge, style and add to map
-    var myDataLine = L.polyline([[46.779329, -92.093135],[46.778565, -92.092621]], {color: 'blue', weight: 2}).addTo(map);
+    var myDataLine = L.polyline([[46.779329, -92.093135],[46.778565, -92.092621]], {color: 'red', weight: 2}).addTo(map);
         
     // Create polygon feature for Canal Park, style and add to map
-    var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]], {color: 'red', weight: 2}).addTo(map);
+    var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]], {color: 'green', weight: 2}).addTo(map);
         
     // Bind popup to data point feature, city hall, style picture
     myDataPoint.bindPopup("<h3>Duluth City Hall</h3><p>Information about City Hall</p>");
