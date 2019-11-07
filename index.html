@@ -69,10 +69,10 @@
     var myDataPoint = L.marker([46.717653, -92.216581]).addTo(map);
         
     // Create polyline feature for Aerial Lift Bridge, style and add to map
-    var myDataLine = L.polyline([46.779329, -92.093135],[46.778565, -92.092621]).addTo(map);
+    var myDataLine = L.polyline([[46.779329, -92.093135],[46.778565, -92.092621]]).addTo(map);
         
     // Create polygon feature for Canal Park, style and add to map
-    var myArea = L.polygon([46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]).addTo(map);
+    var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]]).addTo(map);
         
     // Bind popup to data point feature, city hall, style picture
     myDataPoint.bindPopup("<h3>Duluth City Hall</h3><p>Information about City Hall</p>");
