@@ -68,11 +68,17 @@
      // Create point feature for Spirit Mountain Recreation Area, style and add to map
     var myDataPoint = L.marker([46.717653, -92.216581]).addTo(map);
         
+    // Create point feature for Edger Tower, style and add to map
+    var myDataPoint = L.marker([46.838563, -92.082981]).addTo(map);
+        
+    // Create point feature for Hartley Nature Center , style and add to map
+    var myDataPoint = L.marker([46.838563, -92.082981]).addTo(map);
+        
     // Create polyline feature for Aerial Lift Bridge, style and add to map
-    var myDataLine = L.polyline([[46.779329, -92.093135],[46.778565, -92.092621]]).addTo(map);
+    var myDataLine = L.polyline([[46.779329, -92.093135],[46.778565, -92.092621]], {color: 'blue', weight: 2}).addTo(map);
         
     // Create polygon feature for Canal Park, style and add to map
-    var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]]).addTo(map);
+    var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]], {color: 'red', weight: 2}).addTo(map);
         
     // Bind popup to data point feature, city hall, style picture
     myDataPoint.bindPopup("<h3>Duluth City Hall</h3><p>Information about City Hall</p>");
@@ -91,6 +97,12 @@
         
      // Bind popup to data point feature, Spirit Mountain Recreation Area, style picture
     myDataPoint.bindPopup("<h3>Spirit Mountain Recreation Area</h3><p>Recreational mountain featuring wintertime downhill skiing & a summertime adventure park.</p>");
+        
+    // Bind popup to data point feature, Edgar Tower, style picture
+    myDataPoint.bindPopup("<h3>Edgar Tower</h3><p>Information About Edgar Tower</p>");
+        
+    // Bind popup to data point feature, Hartley Nature Center , style picture
+    myDataPoint.bindPopup("<h3>Hartley Nature Center</h3><p>Information about Hartley Nature Center</p>");
         
      // Bind popup to data polyline feature, Aerial Lift Bridge, style picture
     myDataLine.bindPopup("<h3>Aerial Lift Bridge</h3><p>The Aerial Lift Bridge is a landmark in the port city of Duluth, Minnesota. The span began life in 1905 as the United States' first transporter bridge. In 1929, the span was converted to a vertical lift bridge, and continues to operate today.</p>");
