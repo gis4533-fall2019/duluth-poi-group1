@@ -45,7 +45,7 @@
     <script>    
         
     // Create variable to hold map element, give initial settings to map
-    var map = L.map('map',{ center: [46.752080, -92.150096], zoom:12});
+    var map = L.map('map',{ center: [46.752080, -92.150096], zoom:11});
     
     // Add new base map layer to map from http://leaflet-extras.github.io/leaflet-providers/preview/
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -82,34 +82,34 @@
     var myArea = L.polygon([[46.788184, -92.094291],[46.780044, -92.090494], [46.779016, -92.094357],[46.781293, -92.095944],[46.776636, -92.102231],[46.778531, -92.105171]], {color: 'green', weight: 2}).addTo(map);
         
     // Bind popup to data point feature, city hall, style picture
-    myDataPoint1.bindPopup("<h3>Duluth City Hall</h3><p>Duluth is currently home to over 86,000 residents. Mayor Emily Larson was inaugurated on 01/04/2016 and helps to delegate legislation for the city of Duluth. While the city hall is not a traditional tourist destination, it still cements itself as a staple of Duluth for its representation of the city. </p>");
+    myDataPoint1.bindPopup('<h3>Duluth City Hall</h3><a href="https://duluthmn.gov">City Hall Website</a><p>Duluth is currently home to over 86,000 residents. Mayor Emily Larson was inaugurated on 01/04/2016 and helps to delegate legislation for the city of Duluth. While the city hall is not a traditional tourist destination, it still cements itself as a staple of Duluth for its representation of the city.></p>');
     
      // Bind popup to data point feature, north shore scenic railroad, style picture
-    myDataPoint2.bindPopup("<h3>North Shore Scenic Railroad</h3> <p>Seasonal narrated train tours follow a historic transport corridor for short, long & themed rides.</p>");
+    myDataPoint2.bindPopup('<h3>North Shore Scenic Railroad</h3> <a href="https://duluthtrains.com/">North Shore Scenic Railroad</a><p>Seasonal narrated train tours follow a historic transport corridor for short, long & themed rides.</p>');
         
     // Bind popup to data point feature, Jay Cooke State Park, style picture
-    myDataPoint3.bindPopup("<h3> Jay Cooke State Park </h3> <p> Jay Cooke State Park is a state park of Minnesota, United States, protecting the lower reaches of the St. Louis River. The park is located about 10 miles southwest of Duluth and is one of the ten most visited state parks in Minnesota. The western half of the park contains part of a rocky, 13-mile gorge. </p>");
+    myDataPoint3.bindPopup('<h3> Jay Cooke State Park </h3> <a href="https://www.dnr.state.mn.us/state_parks/park.html?id=spk00187#homepage">DNR State Parks</a><p> Jay Cooke State Park is a state park of Minnesota, United States, protecting the lower reaches of the St. Louis River. The park is located about 10 miles southwest of Duluth and is one of the ten most visited state parks in Minnesota. The western half of the park contains part of a rocky, 13-mile gorge. </p>');
         
     // Bind popup to data point feature, Great Lakes Aquarium, style picture
-    myDataPoint4.bindPopup("<h3>Great Lakes Aquarium</h3><p>The Great Lakes Aquarium opened in 2000 and is located on the Duluth waterfront. A 501 private nonprofit, its mission is to inspire people to explore their connection to Lake Superior and waters of the world.</p>");
+    myDataPoint4.bindPopup('<h3>Great Lakes Aquarium</h3> <a href="https://glaquarium.org/">GLA Website</a><p>The Great Lakes Aquarium opened in 2000 and is located on the Duluth waterfront. A 501 private nonprofit, its mission is to inspire people to explore their connection to Lake Superior and waters of the world.</p>');
         
     // Bind popup to data point feature, Glensheen, style picture
-    myDataPoint5.bindPopup("<h3>Glensheen Mansion</h3><p>Glensheen, the Historic Congdon Estate is a 20,000 square foot mansion in Duluth, Minnesota, United States, operated by the University of Minnesota Duluth as a historic house museum.</p>");
+    myDataPoint5.bindPopup('<h3>Glensheen Mansion</h3><a href="https://glensheen.org/">Glensheen Mansion</a><p>Glensheen, the Historic Congdon Estate is a 20,000 square foot mansion in Duluth, Minnesota, United States, operated by the University of Minnesota Duluth as a historic house museum.</p>');
         
      // Bind popup to data point feature, Spirit Mountain Recreation Area, style picture
-    myDataPoint6.bindPopup("<h3>Spirit Mountain Recreation Area</h3><p>Recreational mountain featuring wintertime downhill skiing & a summertime adventure park.</p>");
+    myDataPoint6.bindPopup('<h3>Spirit Mountain Recreation Area</h3><a href="https://www.spiritmt.com/">Spirit Mountain</a><p>Recreational mountain featuring wintertime downhill skiing & a summertime adventure park.</p>');
         
     // Bind popup to data point feature, Enger Tower, style picture
-    myDataPoint7.bindPopup("<h3>Enger Tower</h3><p>This historic Duluth landmark was inaugaurated in 1939 and named after Bert Enger. Standing at 80 feet tall, this 6 story building offers visitors the opportunity to experienc Duluth from an elevated perspective.</p>");
+    myDataPoint7.bindPopup('<h3>Enger Tower</h3><a href="http://www.engertowerduluth.com/">Enger Tower</a><p>This historic Duluth landmark was inaugaurated in 1939 and named after Bert Enger. Standing at 80 feet tall, this 6 story building offers visitors the opportunity to experienc Duluth from an elevated perspective.</p>');
         
     //Bind popup to data point feature, Hartley Nature Center, style picture]
-    myDataPoint.bindPopup("<h3> Hartley Nature Center</h3><p>Hartley Nature Center offers a fun and unique combination of nature and education for people of all ages. HNC is an independent, non-profit, environmental education organization that encompasses 660 acres of beautiful Duluth wilderness.")
+    myDataPoint.bindPopup('<h3> Hartley Nature Center</h3><a href="https://hartleynature.org/">Hartley Nature Center</a><p>Hartley Nature Center offers a fun and unique combination of nature and education for people of all ages. HNC is an independent, non-profit, environmental education organization that encompasses 660 acres of beautiful Duluth wilderness.')
         
      // Bind popup to data polyline feature, Aerial Lift Bridge, style picture
-    myDataLine.bindPopup("<h3>Aerial Lift Bridge</h3><p>The Aerial Lift Bridge is a landmark in the port city of Duluth, Minnesota. The span began life in 1905 as the United States' first transporter bridge. In 1929, the span was converted to a vertical lift bridge, and continues to operate today.</p>");
+    myDataLine.bindPopup('<h3>Aerial Lift Bridge</h3><a href="http://www.goduluthmn.com/best-duluth-attractions/aerial-lift-bridge/">Aerial Lift Bridge</a><p>The Aerial Lift Bridge is a landmark in the port city of Duluth, Minnesota. The span began life in 1905 as the United States first transporter bridge. In 1929, the span was converted to a vertical lift bridge, and continues to operate today.</p>');
         
      // Bind popup to data polygon feature, Canal Park, style picture
-    myArea.bindPopup("<h3>Canal Park</h3><p>Canal Park is a tourist and recreation-oriented district of Duluth, Minnesota, United States. Situated across the Interstate 35 freeway from Downtown Duluth, it is connected by the famous Aerial Lift Bridge to the Park Point sandbar and neighborhood.</p>");
+    myArea.bindPopup('<h3>Canal Park</h3><a href="https://canalpark.com/">Canal Park</a><p>Canal Park is a tourist and recreation-oriented district of Duluth, Minnesota, United States. Situated across the Interstate 35 freeway from Downtown Duluth, it is connected by the famous Aerial Lift Bridge to the Park Point sandbar and neighborhood.</p>');
     
     // Add map coordinates on mouse move
     // https://docs.mapbox.com/,apbox-gl-js/example/mouse-position/
